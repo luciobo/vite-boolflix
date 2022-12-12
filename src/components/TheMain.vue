@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
@@ -48,6 +48,30 @@
 
 <script>
 
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+            listaFilm: [],
+ 
+        };
+    },
+    methods: {},
+    beforeMount() { },
+    mounted() {
+        axios.get("https://api.themoviedb.org/3/movie/550", {
+            params:{
+                api_key: "e15ac2f04fd813caf1f165f01e797011"
+            }
+        } ) 
+        
+            .then(resp => {
+                console.log(resp);
+                this.listaFilm = resp.data.results
+            })
+    },
+}
 
 </script>
 
