@@ -7,7 +7,7 @@
                 v-for="(listaFilmHTML, i) in listaFilm">
                     <img src="" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">{{listaFilmHTML.data.original_title}}</h5>
+                        <h5 class="card-title">{{}}</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
@@ -25,7 +25,6 @@ export default {
     data() {
         return {
             listaFilm: [],
- 
         };
     },
     methods: {},
