@@ -1,12 +1,11 @@
 
 <template>
     <div class="container bg-black py-5">
-        <div class="row g-4">
-            <div class="col-3">
-
-                <div class="card" 
-                v-for="ciao in store.listaFilm">
-                    <img src="" class="card-img-top" alt="">
+        <h1 class="pb-5 text-white">FILM</h1>
+        <div class="row g-4 d-flex">
+            <div class="col-2" v-for="ciao in store.listaFilm">
+                <div class="card h-100">
+                    <img :src="store.img.link + store.img.size + ciao.poster_path" class="card-img-top" alt="">
                     <div class="card-body">
                         <h4 class="card-title">{{ciao.title}}</h4>
                         <h6>{{ciao.original_title}}</h6>

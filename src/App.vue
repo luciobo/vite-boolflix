@@ -21,15 +21,15 @@ export default {
 
 <template>
     <div class="">
-        <div>
+        <div class="bg-secondary">
             <TheHeader></TheHeader>
         </div>
 
-        <div>
+        <div class="bg-secondary">
             <TheMain></TheMain>
         </div>
     </div>
-    
+
 </template>
 
 <style lang="scss">

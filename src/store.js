@@ -9,7 +9,7 @@ export const store = reactive({
     research: "",
     img: {
         link: "https://image.tmdb.org/t/p/",
-        size: "w92",
+        size: "w342",
     },
 });
 
