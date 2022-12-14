@@ -4,14 +4,14 @@ import axios from "axios";
 
 
 
-export const store = ({
+export const store = reactive({
     listaFilm: [],
     research: "",
     img: {
         link: "https://image.tmdb.org/t/p/",
         size: "w92",
     },
-})
+});
 
 
 export function cercaFilm() {
