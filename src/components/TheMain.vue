@@ -1,13 +1,13 @@
 
 <template>
-    <div class="text-danger container bg-black py-5">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
+    <div class="container bg-black py-5">
+        <div class="row g-4">
+            <div class="col-3">
                 <div class="card" 
-                v-for="(listaFilmHTML, i) in listaFilm">
+                v-for="ciao in store.listaFilm">
                     <img src="" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">{{}}</h5>
+                        <h5 class="card-title">{{ciao.title}}</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
@@ -18,28 +18,18 @@
 </template>
 
 <script>
-
+import { store } from "../store"
 import axios from "axios";
 
 export default {
     data() {
         return {
-            listaFilm: [],
+            store,
         };
     },
     methods: {},
     beforeMount() { },
     mounted() {
-        axios.get("https://api.themoviedb.org/3/movie/550", {
-            params:{
-                api_key: "e15ac2f04fd813caf1f165f01e797011"
-            }
-        } ) 
-        
-            .then(resp => {
-                console.log(resp);
-                this.listaFilm = resp.data.results
-            })
     },
 }
 
