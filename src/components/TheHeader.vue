@@ -4,7 +4,7 @@
         <div class="bg-black d-flex align-items-center justify-content-between">
             <img src="/logonetflix.png" alt="">
             <form action="" @submit.prevent="cercaIlFilm()">
-                <div class="input-group p-2  d-flex">
+                <div class="input-group p-2 d-flex">
                     <input v-model="store.research" type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
                     aria-describedby="button-addon1">
                     <!-- ascolto il click sul pulsante -->
@@ -19,7 +19,7 @@
 
 <script>
 // importo lo store, mi servira per collegare il button per la ricerca e per il search in store.js
-import { store, cercaFilm } from "../store"
+import { store, cercaFilm, cercaSerie } from "../store"
 
 export default {
     data() {
@@ -30,6 +30,7 @@ export default {
     methods: {
         cercaIlFilm(){
             cercaFilm();
+            cercaSerie();
         }
     },
 }
