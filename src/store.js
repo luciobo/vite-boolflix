@@ -3,7 +3,7 @@ import { reactive } from "vue";
 import axios from "axios";
 
 
-// export store, in questo caso esporto l'array lisyta film e il research per coollegare il v model
+// export store, in questo caso esporto l'array lisyta film e il research per coollegare il v model ricordarsi il reactive....
 export const store = reactive({
     listaFilm: [],
     research: "",
