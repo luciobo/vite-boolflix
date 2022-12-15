@@ -1,9 +1,9 @@
-
+// import sulla pagina in questo caso vue e axios 
 import { reactive } from "vue";
 import axios from "axios";
 
 
-
+// export store, in questo caso esporto l'array lisyta film e il research per coollegare il v model
 export const store = reactive({
     listaFilm: [],
     research: "",
@@ -13,11 +13,10 @@ export const store = reactive({
     },
 });
 
-
+// funzione per la ricerca dei film, con chieve e query per la ricerca 
 export function cercaFilm() {
-    const rootUrl = "https://api.themoviedb.org/3"
 
-    axios.get(rootUrl + "/search/movie/", {
+    axios.get("https://api.themoviedb.org/3/search/movie/", {
         params: {
             api_key: "e15ac2f04fd813caf1f165f01e797011",
             query: store.research,
