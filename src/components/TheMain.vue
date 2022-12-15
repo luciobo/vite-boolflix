@@ -8,7 +8,7 @@
             <div class="col-3 px-1" v-for="ciao in store.listaFilm">
                 <div class="card h-100">
                     <img :src="store.img.link + store.img.size + ciao.poster_path" class="card-img-top" alt="">
-                    <div class="card-body">
+                    <div class="card-img-overlay text-white mia-card">
                         <h4 class="card-title">Titolo: {{ciao.title}}</h4>
                         <h6>Titolo Originale: {{ciao.original_title}}</h6>
                         <div>Lingua: {{ciao.original_language}}</div>
@@ -25,7 +25,7 @@
             <div class="col-3 px-1" v-for="ciaoSerie in store.listaSerie">
                 <div class="card h-100">
                     <img :src="store.img.link + store.img.size + ciaoSerie.poster_path" class="card-img-top" alt="">
-                    <div class="card-body">
+                    <div class="card-img-overlay text-white mia-card">
                         <h4 class="card-title">Titolo: {{ciaoSerie.name}}</h4>
                         <h6>Titolo Originale: {{ciaoSerie.original_name}}</h6>
                         <div>Lingua: {{ciaoSerie.original_language}}</div>
@@ -56,5 +56,14 @@ export default {
 </script>
 
 <style>
+
+.mia-card {
+    opacity: 0;
+}
+
+.mia-card:hover {
+    opacity: 1;
+    background-color: #2f3137af;
+}
 
 </style>
