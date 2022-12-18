@@ -6,7 +6,7 @@
         <h1 class="pb-3 text-white">FILM</h1>
         <div class="g-4 d-flex overflow-auto">
             <div class="col-3 px-1" v-for="ciao in store.listaFilm">
-                <div class="card h-100">
+                <div class="card h-100 overflow-hidden">
                     <img :src="store.img.link + store.img.size + ciao.poster_path" class="card-img-top" alt="">
                     <div class="card-img-overlay text-white mia-card">
                         <h4 class="py-1"> class="card-title">Titolo: {{ciao.title}}</h4>
@@ -24,7 +24,7 @@
         <h1 class="pt-5 pb-3 text-white">SERIE TV</h1>
         <div class="g-4 d-flex overflow-scroll">
             <div class="col-3 px-1" v-for="ciaoSerie in store.listaSerie">
-                <div class="card h-100">
+                <div class="card h-100 overflow-hidden">
                     <img :src="store.img.link + store.img.size + ciaoSerie.poster_path" class="card-img-top" alt="">
                     <div class="card-img-overlay text-white mia-card">
                         <h4 class="py-1">class="card-title">Titolo: {{ciaoSerie.name}}</h4>
